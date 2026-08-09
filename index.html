@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Apps | 制作アプリ一覧</title>
+<meta name="description" content="個人開発アプリの紹介ページ">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">My<span>Apps</span></a>
+    <nav>
+      <a href="#apps">アプリ一覧</a>
+      <a href="#data-table">データ</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" aria-label="テーマ切り替え">🌙</button>
+  </div>
+</header>
+
+<main>
+  <section id="top" class="hero">
+    <div class="container">
+      <p class="eyebrow">Personal Developer Portfolio</p>
+      <h1>作ったアプリを、<br>ここにまとめて公開しています。</h1>
+      <p class="hero-sub">個人開発したWebアプリ・ツールの紹介ページです。気になるアプリがあれば、ぜひ試してみてください。</p>
+      <a href="#apps" class="btn btn-primary">アプリを見る ↓</a>
+    </div>
+  </section>
+
+  <section id="apps" class="apps-section">
+    <div class="container">
+      <h2 class="section-title">Apps</h2>
+      <p class="section-sub">これまでに公開したアプリの一覧です。</p>
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+      </div>
+
+      <div class="apps-grid" id="apps-grid">
+        <!-- カードはjs/main.jsのAPPS配列から自動生成されます -->
+      </div>
+    </div>
+  </section>
+
+  <section id="data-table" class="data-section">
+    <div class="container">
+      <h2 class="section-title">データ</h2>
+      <p class="section-sub">Googleスプレッドシートのデータをそのまま表示しています。シートを更新すると自動で反映されます。</p>
+
+      <div id="data-table-status" class="data-status">読み込み中...</div>
+      <div class="table-scroll">
+        <table id="data-table-el" class="data-table" hidden></table>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container about-inner">
+      <div class="about-avatar" aria-hidden="true">🧑‍💻</div>
+      <div>
+        <h2 class="section-title">About</h2>
+        <p>個人でWebアプリやツールを開発しています。ここでは制作したアプリをまとめて紹介しています。</p>
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">X (Twitter)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">ご質問・お仕事のご相談などお気軽にどうぞ。</p>
+      <a href="mailto:your-email@example.com" class="btn btn-outline">メールを送る</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> My Apps. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/data-table.js"></script>
+</body>
+</html>
