@@ -39,7 +39,7 @@ const APPS = [
     icon: "📸",
     tag: "ツール",
     title: "CaptureApp",
-    desc: "画面上の指定した範囲だけをキャプチャして常に最前面に表示できるWindows常駐ツール。OCRと翻訳機能付き。",
+    desc: "画面上の指定した範囲だけをキャプチャして常に最前面に表示できるWindows用キャプチャツール。OCRと翻訳機能付き。",
     downloadUrl: "https://github.com/satoru-ta/CaptureApp/releases/tag/v1.0.0",
   },
 ];
