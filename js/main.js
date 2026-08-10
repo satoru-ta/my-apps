@@ -35,6 +35,13 @@ const APPS = [
     demoUrl: "#",
     codeUrl: "#",
   },
+  {
+    icon: "📸",
+    tag: "ツール",
+    title: "CaptureApp",
+    desc: "画面上の指定した範囲だけをキャプチャして常に最前面に表示できるWindows常駐ツール。OCRと翻訳機能付き。",
+    downloadUrl: "https://github.com/satoru-ta/CaptureApp/releases/tag/v1.0.0",
+  },
 ];
 
 const grid = document.getElementById("apps-grid");
@@ -50,6 +57,16 @@ function renderApps(filter) {
   }
 
   list.forEach((app) => {
+    const links = [];
+    if (app.demoUrl) {
+      links.push(`<a class="primary" href="${app.demoUrl}" target="_blank" rel="noopener">試す</a>`);
+    } else if (app.downloadUrl) {
+      links.push(`<a class="primary" href="${app.downloadUrl}" target="_blank" rel="noopener">ダウンロード</a>`);
+    }
+    if (app.codeUrl) {
+      links.push(`<a href="${app.codeUrl}" target="_blank" rel="noopener">コード</a>`);
+    }
+
     const card = document.createElement("article");
     card.className = "app-card";
     card.innerHTML = `
@@ -58,10 +75,7 @@ function renderApps(filter) {
         <span class="app-tag">${app.tag}</span>
         <h3 class="app-title">${app.title}</h3>
         <p class="app-desc">${app.desc}</p>
-        <div class="app-links">
-          <a class="primary" href="${app.demoUrl}" target="_blank" rel="noopener">試す</a>
-          <a href="${app.codeUrl}" target="_blank" rel="noopener">コード</a>
-        </div>
+        <div class="app-links">${links.join("")}</div>
       </div>
     `;
     grid.appendChild(card);
