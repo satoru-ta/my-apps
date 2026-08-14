@@ -42,6 +42,13 @@ const APPS = [
     desc: "画面上の指定した範囲だけをキャプチャして常に最前面に表示できるWindows用キャプチャツール。OCRと翻訳機能付き。",
     downloadUrl: "https://github.com/satoru-ta/CaptureApp/releases/tag/v1.0.0",
   },
+  {
+    icon: "📋",
+    tag: "生産性",
+    title: "クリップボード履歴＆ランチャー＆TODO",
+    desc: "クリップボード履歴・定型文・ランチャー・TODOを1つにまとめたWindows常駐ツール。ホットキーまたはマウスジェスチャーで呼び出せます。",
+    downloadUrl: "https://github.com/satoru-ta/ClipboardLauncherTodo/releases/tag/v1.0.0",
+  },
 ];
 
 const grid = document.getElementById("apps-grid");
